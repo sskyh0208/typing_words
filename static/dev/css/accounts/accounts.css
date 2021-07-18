@@ -1,0 +1,53 @@
+.password-reset-form {
+  width: 100%;
+  background: #2a3644;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px #575757;
+          box-shadow: 0 2px 5px #575757;
+  border: 0;
+  margin-bottom: 20px;
+}
+
+.password-reset-form-error {
+  position: absolute;
+  width: 660px;
+}
+
+.password-reset-form-error ul {
+  text-align: center;
+  padding: 0;
+}
+
+.password-reset-form-error li {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.password-reset-form-error form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 72px 64px 72px 64px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.register-complete {
+  width: 100%;
+  background: #2a3644;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px #575757;
+          box-shadow: 0 2px 5px #575757;
+  border: 0;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  text-align: center;
+}
+/*# sourceMappingURL=accounts.css.map */

@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="title">
+    <h1>単語帳の編集</h1>
+</div>
+<div class="main">
+    <div class="words-form">
+        <div class="words-btn">
+            <a href="{% url 'english:wordbooks' %}" id="back" class="red-link"><i class="fas fa-arrow-left"></i></a>
+            <a href="{% url 'english:delete_wordbook' wordbook.id %}" id="delete" class="grey-link"><i class="fas fa-trash-alt"></i></a>
+        </div>
+        <div class="words-title">
+            <div>
+                <h1>{{ wordbook.name }}</h1>
+                <p>{{ wordbook.description }}</p>
+                <p>登録単語数: {{ count }}個</p>
+                <div class="toggle">
+                    <input id="update_wordbook_publish" type="checkbox" name="publish" {% if wordbook.publish %}checked{% endif %}>
+                    <label for="update_wordbook_publish"></label>
+                    <p>公開する</p>
+                </div>
+                <input type="hidden" name="csrfToken" value={{ csrf_token }}>
+            </div>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.name }}
+            {{ form.description }}
+            <div>
+                <input class="red-btn large-btn" type="submit" value="登録">
+            </div>
+        </form>
+    </div>
+    <div class="words-links">
+        {% if page_obj.has_previous %}
+            <div>
+                <a href="?page=1">&laquo; first</a>
+            </div>
+            <div>
+                <a href="?page={{ page_obj.previous_page_number }}">prev</a>
+            </div>
+        {% else %}
+            <div></div>
+            <div></div>
+        {% endif %}
+
+        <div>
+            <span class="current">
+                Page {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+            </span>
+        </div>
+
+        {% if page_obj.has_next %}
+            <div>
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+            </div>
+            <div>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            </div>
+        {% else %}
+            <div></div>
+            <div></div>
+        {% endif %}
+    </div>
+    <div class="words-list">
+        <div class="words-table">
+            <dl class="words-table-head">
+                <dt>
+                    <span>単語</span>
+                </dt>
+                <dd>
+                    <span>意味</span>
+                </dd>
+                <dd>
+                </dd>
+            </dl>
+            {% if object_list %}
+                {% for word in object_list %}
+                    <dl class="words-table-row">
+                        <dt><span>{{ word.name }}</span></dt>
+                        <dd><span>{{ word.description }}</span></dd>
+                        <dd><a href="{% url 'english:delete_word' word.id wordbook.id %}" class="grey-link"><i class="fas fa-trash-alt"></i></a></dd>
+                    </dl>
+                {% endfor %}
+            {% else %}
+                <dl class="words-table-row">
+                    <dt><span></span></dt>
+                    <dd><span></span></dd>
+                    <dd></dd>
+                </dl>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<script>
+$('#update_wordbook_publish').click(function(){
+    var publish = null;
+    if ($('#update_wordbook_publish').prop('checked')) {
+        publish = true;
+    } else {
+        publish = false;
+    }
+    var token = $('input[name=csrfToken]').attr('value');
+    $.ajaxSetup({
+        beforeSend: function(xhr){
+            xhr.setRequestHeader('X-CSRFToken', token);
+        }
+    })
+    $.ajax({
+        url: "{% url 'english:update_wordbook_publish' %}",
+        type: 'POST',
+        data: {wordbook_id: '{{ wordbook.id }}', publish: publish},
+        dataType: 'json',
+        success:function(json){
+            if(json.message){
+                console.log(json.message);
+            }
+        }
+    })
+});
+</script>
+{% endblock content %}

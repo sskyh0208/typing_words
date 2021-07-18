@@ -1,0 +1,50 @@
+.password {
+    &-reset {
+        &-form {
+            width: 100%;
+            background: #2a3644;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgb(87, 87, 87);
+            border: 0;
+            margin-bottom: 20px;
+
+            &-error {
+                position: absolute;
+                width: 660px;
+
+                & ul {
+                    text-align: center;
+                    padding: 0;
+                }
+
+                & li {
+                    color:  red;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                & form {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    padding: 72px 64px 72px 64px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
+
+.register {
+    &-complete {
+        width: 100%;
+        background: #2a3644;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgb(87, 87, 87);
+        border: 0;
+        color: #fff;
+        margin-bottom: 20px;
+        padding: 20px 0;
+        text-align: center;
+    }
+}

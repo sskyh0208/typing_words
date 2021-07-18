@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テストサイト</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/base/base.css' %}">
+    {% if not user.is_authenticated %}
+        <link rel="stylesheet" href="{% static 'css/modal/modal.css' %}">
+    {% endif %}
+    <link rel="stylesheet" href="{% static 'css/english/english.css' %}">
+    <link rel="stylesheet" href="{% static 'css/accounts/accounts.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="nav">
+        <h1 class="title"><a class="red-link" href="{% url 'english:home' %}">TYEPING</a></h1>
+        <ul class="nav-menu">
+            <li class="nav-menu-item"><a class="red-link" href="{% url 'english:home' %}"><i class="fas fa-home"></i> ホーム</a></li>
+            <li class="nav-menu-item"><a class="red-link" href="{% url 'english:publish_wordbooks' %}"><i class="fas fa-book-reader"></i> みんなの単語帳</a></li>
+            {% if user.is_authenticated %}
+            <li class="nav-menu-item"><a class="red-link" href="{% url 'english:wordbooks' %}" class="navbar-brand"><i class="fas fa-book"></i> 単語帳</a></li>
+            <li class="nav-menu-item"><a class="red-link" href="{% url 'accounts:logout' %}" class="navbar-brand"><i class="fas fa-sign-out-alt"></i> ログアウト</a></li>
+            {% else %}
+            <li class="nav-menu-item"><a class="red-link" href="#" class="navbar-brand" id="open-regist"><i class="fas fa-user-plus"></i> 新規登録</a></li>
+            <li class="nav-menu-item"><a class="red-link" href="#" class="navbar-brand" id="open-login"><i class="fas fa-sign-in-alt"></i> ログイン</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    <main class="content">
+        {% block content %}
+        {% endblock content %}
+    </main>
+    {% if not user.is_authenticated %}
+        <div id="mask-login" class="hidden"></div>
+        <div id="modal-login" class="hidden">
+            <div class="modal-body">
+                <h1>ログイン</h1>
+                <form id="form-login" action="" method="post" novalidate>
+                    {% csrf_token %}
+                    <input class="large-input" type="text" name="login-username" id="login-username" placeholder="メールアドレス">
+                    <input class="large-input" type="password" name="login-password" id="login-password" placeholder="パスワード">
+                    <input class="large-submit" type="submit" value="ログイン">
+                </form>
+            </div>
+        </div>
+        <div id="mask-regist" class="hidden"></div>
+        <div id="modal-regist" class="hidden">
+            <div class="modal-body">
+                <h1>新規登録</h1>
+                <form id="form-regist" action="" method="post" novalidate>
+                    {% csrf_token %}
+                    <input class="large-input" type="text" name="username" placeholder="ユーザ名">
+                    <input class="large-input" type="email" name="email" placeholder="メールアドレス">
+                    <input class="large-submit" type="submit" value="登録">
+                </form>
+            </div>
+        </div>
+        <div id="mask-message" class="hidden"></div>
+        <div id="modal-message" class="hidden">
+            <div class="modal-body">
+                <div id="message-body"></div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script>
+            var loginUrl = "{% url 'accounts:login' %}"
+            var registUrl = "{% url 'accounts:regist' %}"
+        </script>
+        <script type="text/javascript" src="{% static 'js/modal/main.js' %}"></script>
+    {% endif %}
+</body>
+</html>

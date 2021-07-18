@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/accounts/login.css' %}">
+<div class="title">
+    <h1>ログイン</h1>
+</div>
+<div class="main">
+    <div class="login">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.username }}
+            {{ form.password }}
+            <input class="large-submit red-btn" type="submit" value="ログイン">
+        </form>
+    </div>
+</div>
+{% endblock content %}

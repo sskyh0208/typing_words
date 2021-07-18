@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="title">
+    <h1>あなたの単語帳</h1>
+</div>
+<div class="main">
+    <div class="card-form">
+        <h2>新しい単語帳を作る</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.name }}
+            {{ form.description }}
+            <div>
+                <div class="toggle">
+                    {{ form.publish }}
+                    <label for="id_publish"></label>
+                    <p>公開する</p>
+                </div>
+                <input class="red-btn large-btn" type="submit" value="作成">
+            </div>
+        </form>
+    </div>
+    <div class="card-links">
+        {% if page_obj.has_previous %}
+            <div>
+                <a href="?page=1">&laquo; first</a>
+            </div>
+            <div>
+                <a href="?page={{ page_obj.previous_page_number }}">prev</a>
+            </div>
+        {% else %}
+            <div></div>
+            <div></div>
+        {% endif %}
+
+        <div>
+            <span class="current">
+                Page {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+            </span>
+        </div>
+
+        {% if page_obj.has_next %}
+            <div>
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+            </div>
+            <div>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            </div>
+        {% else %}
+            <div></div>
+            <div></div>
+        {% endif %}
+    </div>
+    <div class="card-list">
+        {% for wordbook in object_list %}
+        <div class="card">
+            <nav class="card-nav">
+                <ul class="card-nav-menu">
+                    <li class="card-nav-menu-item">
+                        <a class="red-link" href="{% url 'english:typing' wordbook.id %}"><i class="fas fa-keyboard"></i> タイピング</a>
+                    </li>
+                    <li class="card-nav-menu-item">
+                        <a class="red-link" href="{% url 'english:words' wordbook.id %}"><i class="fas fa-edit"></i> 編集</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="card-body">
+                {% comment %} <h3>{{ wordbook.name }}</h3> {% endcomment %}
+                <h1>{{ wordbook.name }}</h1>
+                <p>{{ wordbook.description }}</p>
+            </div>
+            <div class="card-footer">
+                <small>更新日:{{ wordbook.update_at }}</small>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

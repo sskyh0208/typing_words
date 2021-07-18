@@ -1,0 +1,11 @@
+.regist-complete {
+    width: 100%;
+    background: #2a3644;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgb(87, 87, 87);
+    border: 0;
+    color: #fff;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    text-align: center;
+}

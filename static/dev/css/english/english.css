@@ -1,0 +1,759 @@
+@charset "UTF-8";
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #2a3644;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px #575757;
+          box-shadow: 0 2px 5px #575757;
+  width: 100%;
+  height: 160px;
+  margin-bottom: 20px;
+  text-align: center;
+  /* 入力部分 */
+  /* ページネーション */
+  /* 一覧表示部分 */
+}
+
+.card-form {
+  width: 100%;
+  height: 240px;
+  background: #2a3644;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px #575757;
+          box-shadow: 0 2px 5px #575757;
+  border: 0;
+  margin-bottom: 20px;
+}
+
+.card-form h2 {
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.card-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card-form form :last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-form #id_name {
+  margin: 0 auto 0 0;
+  height: 32px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.card-form #id_description {
+  margin: 0 auto 0 0;
+  height: 32px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.card-form p {
+  color: #fff;
+}
+
+.card-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card-links div {
+  text-align: center;
+}
+
+.card-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.card-nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.card-nav-menu-item {
+  margin-right: 32px;
+}
+
+.card-nav-menu a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card-body {
+  height: 100px;
+}
+
+.card-body h1 {
+  color: #f26964;
+  font-size: 24px;
+  margin: 0;
+}
+
+.card-body p {
+  color: #fff;
+  margin: 0;
+}
+
+.card-footer {
+  position: relative;
+  bottom: 0;
+  background: slategray;
+  width: 100%;
+  color: #2a3644;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.typing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #2a3644;
+  border-radius: 10px;
+  padding: 20px 20px;
+  /* タイピング中のスコア */
+  /* ゲーム終了後 */
+}
+
+.typing #description {
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.typing #name {
+  font-size: 2em;
+  font-weight: bold;
+  color: #2a3644;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.typing #name span {
+  vertical-align: middle;
+  margin-bottom: 0;
+  -webkit-transition: all 300ms 0s ease;
+  transition: all 300ms 0s ease;
+}
+
+.typing .add-red {
+  font-size: 0.9em;
+  color: #f26964;
+}
+
+.typing #score {
+  text-align: center;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.typing #score p:first-child {
+  margin-right: 2em;
+}
+
+.typing .score-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.typing .score-title {
+  color: #fff;
+  text-align: center;
+}
+
+.typing .score-perfect {
+  color: #f26964;
+  text-align: center;
+}
+
+.typing .score-table dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.typing .score-table dl dt {
+  width: 40%;
+}
+
+.typing .score-table dl dd {
+  margin-left: 1em;
+  width: 40%;
+}
+
+.typing .score-table dl dd:nth-child(3) {
+  width: 20%;
+  text-align: center;
+}
+
+.typing .score-table-head span {
+  color: #f26964;
+}
+
+.typing .score-table-row {
+  color: #fff;
+}
+
+.typing .score-table-row dt {
+  border-bottom: dotted 1px grey;
+}
+
+.typing .score-table-row dd {
+  border-bottom: dotted 1px grey;
+}
+
+.words {
+  /* ページネーション */
+  /* 単語一覧表示 */
+}
+
+.words-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 20px;
+  background: #2a3644;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px #575757;
+          box-shadow: 0 2px 5px #575757;
+  border: 0;
+  margin-bottom: 20px;
+}
+
+.words-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.words-form form :last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.words-form #id_name {
+  margin-bottom: 8px;
+}
+
+.words-form #id_description {
+  margin-bottom: 8px;
+}
+
+.words-form dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.words-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.words-title {
+  margin-bottom: 16px;
+}
+
+.words-title h1 {
+  color: #f26964;
+  font-size: 24px;
+}
+
+.words-title p {
+  color: #fff;
+}
+
+.words-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.words-links div {
+  text-align: center;
+}
+
+.words-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 20px;
+  background: #2a3644;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px #575757;
+          box-shadow: 0 2px 5px #575757;
+  border: 0;
+}
+
+.words-table {
+  background: #2a3644;
+}
+
+.words-table dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.words-table dl dt {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.words-table dl dd {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.words-table dl dd:nth-child(3) {
+  width: 10%;
+}
+
+.words-table-row dt {
+  border-bottom: dotted 1px grey;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.words-table-row dd:nth-child(2n) {
+  border-bottom: dotted 1px grey;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.words-table-row span {
+  color: #fff;
+}
+
+.words-table-row :last-child {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.words-table-head span {
+  color: #f26964;
+}
+
+@media (min-width: 600px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #2a3644;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 5px #575757;
+            box-shadow: 0 2px 5px #575757;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 20px;
+    text-align: center;
+    /* 入力部分 */
+    /* ページネーション */
+    /* 一覧表示部分 */
+  }
+  .card-form {
+    width: 100%;
+    height: 240px;
+    background: #2a3644;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 5px #575757;
+            box-shadow: 0 2px 5px #575757;
+    border: 0;
+    margin-bottom: 20px;
+  }
+  .card-form h2 {
+    color: #fff;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .card-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 24px 64px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .card-form form :last-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .card-form #id_name {
+    margin: 0 auto 0 0;
+    height: 32px;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .card-form #id_description {
+    margin: 0 auto 0 0;
+    height: 32px;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .card-form p {
+    color: #fff;
+  }
+  .card-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .card-links div {
+    text-align: center;
+    width: 20%;
+  }
+  .card-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 16px 0;
+  }
+  .card-nav-menu-item {
+    margin-right: 32px;
+  }
+  .card-nav-menu a {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .card-body {
+    height: 100%;
+  }
+  .card-body h1 {
+    color: #f26964;
+    font-size: 40px;
+    margin: 8px 0;
+  }
+  .card-body p {
+    color: #fff;
+    margin: 0;
+  }
+  .card-footer {
+    position: relative;
+    bottom: 0;
+    background: slategray;
+    width: 100%;
+    color: #2a3644;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .typing {
+    padding: 20px 40px 45px 40px;
+    /* ゲーム終了後 */
+  }
+  .typing #name {
+    font-size: 6em;
+  }
+  .typing .add-red {
+    font-size: 0.5em;
+  }
+  .typing .score-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .typing .score-title {
+    color: #fff;
+    text-align: center;
+  }
+  .typing .score-perfect {
+    color: #f26964;
+    text-align: center;
+  }
+  .typing .score-table dl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .typing .score-table dl dt {
+    width: 45%;
+  }
+  .typing .score-table dl dd {
+    width: 45%;
+  }
+  .typing .score-table dl dd:nth-child(3) {
+    width: 10%;
+    text-align: center;
+  }
+  .typing .score-table dl-head span {
+    color: #f26964;
+  }
+  .typing .score-row dt {
+    border-bottom: dotted 1px grey;
+  }
+  .typing .score-row dd {
+    border-bottom: dotted 1px grey;
+  }
+  .typing .score-row span {
+    color: #fff;
+  }
+  .words {
+    /* ページネーション */
+    /* 単語一覧表示 */
+  }
+  .words-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px 40px 40px 40px;
+    background: #2a3644;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 5px #575757;
+            box-shadow: 0 2px 5px #575757;
+    border: 0;
+    margin-bottom: 20px;
+  }
+  .words-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .words-form form :last-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .words-form #id_name {
+    margin-bottom: 8px;
+  }
+  .words-form #id_description {
+    margin-bottom: 8px;
+  }
+  .words-form dl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .words-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .words-title {
+    margin-bottom: 16px;
+  }
+  .words-title h1 {
+    color: #f26964;
+  }
+  .words-title p {
+    color: #fff;
+  }
+  .words-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .words-links div {
+    text-align: center;
+    width: 20%;
+  }
+  .words-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px 40px 40px 40px;
+    background: #2a3644;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 2px 5px #575757;
+            box-shadow: 0 2px 5px #575757;
+    border: 0;
+  }
+  .words-table {
+    background: #2a3644;
+  }
+  .words-table dl {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .words-table dl dt {
+    width: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .words-table dl dd {
+    width: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .words-table dl dd:nth-child(3) {
+    width: 10%;
+  }
+  .words-table-row dt {
+    border-bottom: dotted 1px grey;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .words-table-row dd:nth-child(2n) {
+    border-bottom: dotted 1px grey;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .words-table-row span {
+    color: #fff;
+  }
+  .words-table-row :last-child {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .words-table-head span {
+    color: #f26964;
+  }
+}
+/*# sourceMappingURL=english.css.map */

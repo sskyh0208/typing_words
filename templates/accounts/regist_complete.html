@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="title">
+    <h1>本登録完了</h1>
+</div>
+<div class="main">
+    <div class="regist-complete">
+        <p>本登録が完了しました。</p>
+        <p>引き続きサービスをお楽しみください。</p>
+    </div>
+</div>
+<script>
+    setTimeout(function(){
+        window.location.href = "{% url 'english:home' %}";
+    }, 5000);
+</script>
+{% endblock content %}

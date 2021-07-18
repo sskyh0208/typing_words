@@ -1,0 +1,542 @@
+@charset "UTF-8";
+html, body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #ccc;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.nav {
+  background: #2a3644;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 8px 40px;
+}
+
+.nav a {
+  color: white;
+}
+
+.content {
+  line-height: 1.6;
+  margin: 0 auto;
+}
+
+.content .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin: auto;
+}
+
+.content .title h1 {
+  color: #2a3644;
+  text-align: center;
+}
+
+/* フォーム共通 */
+.large-input {
+  height: 32px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-indent: 1em;
+  outline: none;
+  border-radius: 5px;
+  border: 0;
+  font-size: 24px;
+  margin-bottom: 3px;
+  text-indent: 1em;
+}
+
+.large-submit {
+  border-radius: 5px;
+  border: 0;
+  font-size: 24px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.large-btn {
+  border-radius: 8px;
+  border: 0;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 4px 24px;
+}
+
+.small-btn {
+  border-radius: 8px;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px 8px;
+}
+
+/* ボタン共通 */
+.red-link {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.red-link:hover {
+  color: #ff7d79;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.red-btn {
+  background: #f26964;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.red-btn:hover {
+  background: #de5550;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.grey-link {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.grey-link:hover {
+  color: #506272;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.grey-btn {
+  background-color: #3c4e5e;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.grey-btn:hover {
+  background-color: #283a4a;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* トグルボタン */
+.toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.toggle p {
+  margin: 0;
+}
+
+.toggle input[type="checkbox"] {
+  display: none;
+}
+
+.toggle input[type="checkbox"]:checked + label {
+  background-color: #2196F3;
+}
+
+.toggle input[type="checkbox"]:checked + label:after {
+  left: 24px;
+}
+
+.toggle label {
+  width: 48px;
+  height: 24px;
+  background: #485868;
+  position: relative;
+  display: inline-block;
+  border-radius: 24px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-right: 10px;
+}
+
+.toggle label:after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background: #fff;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .nav {
+    background: #2a3644;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .nav a {
+    color: white;
+  }
+  .nav .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 500px;
+    padding: 0;
+  }
+  .content {
+    line-height: 1.6;
+    margin: 0 auto;
+    padding-top: 160px;
+    width: 660px;
+  }
+  .content .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
+  .content .title h1 {
+    color: #2a3644;
+    text-align: center;
+  }
+  /* フォーム共通 */
+  .large-input {
+    height: 32px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-indent: 1em;
+    outline: none;
+    border-radius: 5px;
+    border: 0;
+    font-size: 24px;
+    margin-bottom: 3px;
+    text-indent: 1em;
+  }
+  .large-submit {
+    border-radius: 5px;
+    border: 0;
+    font-size: 24px;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  .large-btn {
+    border-radius: 8px;
+    border: 0;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px 24px;
+  }
+  .small-btn {
+    border-radius: 8px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 2px 8px;
+  }
+  /* ボタン共通 */
+  .red-link {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .red-link:hover {
+    color: #ff7d79;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .red-btn {
+    background: #f26964;
+    color: #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .red-btn:hover {
+    background: #de5550;
+    color: #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .grey-link {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .grey-link:hover {
+    color: #506272;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .grey-btn {
+    background-color: #3c4e5e;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .grey-btn:hover {
+    background-color: #283a4a;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  /* トグルボタン */
+  .toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .toggle p {
+    margin: 0;
+  }
+  .toggle input[type="checkbox"] {
+    display: none;
+  }
+  .toggle input[type="checkbox"]:checked + label {
+    background-color: #2196F3;
+  }
+  .toggle input[type="checkbox"]:checked + label:after {
+    left: 24px;
+  }
+  .toggle label {
+    width: 48px;
+    height: 24px;
+    /* background: rgb(32, 44, 58); */
+    background: #485868;
+    position: relative;
+    display: inline-block;
+    border-radius: 24px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-right: 10px;
+  }
+  .toggle label:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  /* fontawsome */
+  /* a i{
+    color: #ff7d79;
+} */
+  /* ゴミ箱アイコン */
+  a .fa-trash-alt {
+    color: slategray;
+  }
+}
+
+@media (min-width: 1280px) {
+  .content {
+    line-height: 1.6;
+    margin: 0 auto;
+    padding-top: 160px;
+    width: 660px;
+  }
+  .content .title h1 {
+    color: #2a3644;
+    text-align: center;
+  }
+  /* フォーム共通 */
+  .large-input {
+    height: 32px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    text-indent: 1em;
+    outline: none;
+    border-radius: 5px;
+    border: 0;
+    font-size: 24px;
+    margin-bottom: 3px;
+    text-indent: 1em;
+  }
+  .large-submit {
+    border-radius: 5px;
+    border: 0;
+    font-size: 24px;
+    margin-top: 8px;
+    cursor: pointer;
+  }
+  .large-btn {
+    border-radius: 8px;
+    border: 0;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px 24px;
+  }
+  .small-btn {
+    border-radius: 8px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 2px 8px;
+  }
+  /* ボタン共通 */
+  .red-link {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .red-link:hover {
+    color: #ff7d79;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .red-btn {
+    background: #f26964;
+    color: #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .red-btn:hover {
+    background: #de5550;
+    color: #fff;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .grey-link {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .grey-link:hover {
+    color: #506272;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .grey-btn {
+    background-color: #3c4e5e;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .grey-btn:hover {
+    background-color: #283a4a;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  /* トグルボタン */
+  .toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .toggle p {
+    margin: 0;
+  }
+  .toggle input[type="checkbox"] {
+    display: none;
+  }
+  .toggle input[type="checkbox"]:checked + label {
+    background-color: #2196F3;
+  }
+  .toggle input[type="checkbox"]:checked + label:after {
+    left: 24px;
+  }
+  .toggle label {
+    width: 48px;
+    height: 24px;
+    /* background: rgb(32, 44, 58); */
+    background: #485868;
+    position: relative;
+    display: inline-block;
+    border-radius: 24px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-right: 10px;
+  }
+  .toggle label:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  /* fontawsome */
+  /* a i{
+    color: #ff7d79;
+} */
+  /* ゴミ箱アイコン */
+  a .fa-trash-alt {
+    color: slategray;
+  }
+}
+/*# sourceMappingURL=base.css.map */

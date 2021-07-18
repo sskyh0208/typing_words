@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="title">
+    <h1>{{ wordbook.name }}</h1>
+</div>
+<div class="main">
+    <div id="typing" class="typing">
+        <h1 id="description"></h1>
+        <p id="name"></p>
+        <div id="score">
+            <p>成功: <span id="success"></span></p>
+            <p>失敗: <span id="failed"></span></p>
+        </div>
+    </div>
+</div>
+<input type="hidden" name="csrfToken" value="{{ csrf_token }}">
+<script>
+var words = {{ words|safe }};
+var wordbook = {{ wordbook|safe }};
+</script>
+<script type="text/javascript" src="{% static 'js/game/tap.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/game/typing.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/game/main.js' %}"></script>
+{% endblock %}

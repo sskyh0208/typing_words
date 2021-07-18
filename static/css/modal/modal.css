@@ -1,0 +1,315 @@
+@charset "UTF-8";
+.modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: #2a3644;
+  color: #fff;
+  width: 320px;
+  padding: 40px 40px;
+  border-radius: 10px;
+  /* books.html */
+}
+
+.modal-body form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-body input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.modal-body th {
+  vertical-align: middle;
+}
+
+.modal-body a {
+  display: block;
+  width: 100px;
+}
+
+.modal-body td {
+  text-align: left;
+  height: 50px;
+}
+
+#modal-body-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#modal-body-btn a {
+  width: 100px;
+}
+
+#closeBtn {
+  display: block;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+/* ログインモーダル */
+#mask-login {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+#mask-login.hidden {
+  display: none;
+}
+
+#modal-login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0 auto;
+  z-index: 21;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#modal-login.hidden {
+  -webkit-transform: translate(-50%, -800px);
+          transform: translate(-50%, -800px);
+}
+
+/* 新規登録モーダル */
+#mask-regist {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+#mask-regist.hidden {
+  display: none;
+}
+
+#modal-regist {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0 auto;
+  z-index: 21;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#modal-regist.hidden {
+  -webkit-transform: translate(-50%, -800px);
+          transform: translate(-50%, -800px);
+}
+
+/* メッセージモーダル */
+#mask-message {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+#mask-message.hidden {
+  display: none;
+}
+
+#modal-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin: 0 auto;
+  z-index: 21;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#modal-message.hidden {
+  -webkit-transform: translate(-50%, -800px);
+          transform: translate(-50%, -800px);
+}
+
+@media (min-width: 600px) {
+  .modal-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    background: #2a3644;
+    color: #fff;
+    width: 480px;
+    padding: 40px 40px;
+    border-radius: 10px;
+    /* books.html */
+  }
+  .modal-body form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .modal-body input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .modal-body th {
+    vertical-align: middle;
+  }
+  .modal-body a {
+    display: block;
+    width: 100px;
+  }
+  .modal-body td {
+    text-align: left;
+    height: 50px;
+  }
+  #modal-body-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #modal-body-btn a {
+    width: 100px;
+  }
+  #closeBtn {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  /* ログインモーダル */
+  #mask-login {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+  }
+  #mask-login.hidden {
+    display: none;
+  }
+  #modal-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin: 0 auto;
+    z-index: 21;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #modal-login.hidden {
+    -webkit-transform: translate(-50%, -800px);
+            transform: translate(-50%, -800px);
+  }
+  /* 新規登録モーダル */
+  #mask-regist {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+  }
+  #mask-regist.hidden {
+    display: none;
+  }
+  #modal-regist {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin: 0 auto;
+    z-index: 21;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #modal-regist.hidden {
+    -webkit-transform: translate(-50%, -800px);
+            transform: translate(-50%, -800px);
+  }
+  /* メッセージモーダル */
+  #mask-message {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+  }
+  #mask-message.hidden {
+    display: none;
+  }
+  #modal-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin: 0 auto;
+    z-index: 21;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #modal-message.hidden {
+    -webkit-transform: translate(-50%, -800px);
+            transform: translate(-50%, -800px);
+  }
+}
+/*# sourceMappingURL=modal.css.map */
